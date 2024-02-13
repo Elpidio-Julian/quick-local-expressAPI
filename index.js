@@ -1,17 +1,17 @@
 const express = require('express');
-// const bodyParser = require('body-parser'); ** example middleware for parsing JSON content **
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
 
 // Add any necessary middleware for debugging here
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // Create necessary handlers for returning request response information as needed for debugging purposes
 // get request at localhost:{port} that sends back the sent request information
 app.get('/', (req, res, next) => {
-  console.log('Received get request');
-  res.send({reqData: req})
+  console.log('Received get request', req); // log request data in console
+  res.send({reqData: 'request received'}); //confirmed request placeholder
 });
 
 // Error handling middleware

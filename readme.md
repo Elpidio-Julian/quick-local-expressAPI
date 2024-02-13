@@ -40,8 +40,8 @@
   req.foo = 'foo'
   result = await fooValidate(req.foo)
   res.send({
-  reqData: req, 
-  resultInfo: result
+  reqData: 'placeholder', 
+  resultInfo: 'request received'
   });
  });
  ```
