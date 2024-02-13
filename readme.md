@@ -8,6 +8,7 @@
 1. Download the necessary dependencies using npm i
 2. configure the port if necessary
 3. create handlers to suit your needs for debugging specific requests
+4. Use npm run start to start the server default at localhost:3000
 
 
 
@@ -43,4 +44,24 @@
   resultInfo: result
   });
  });
+ ```
+ * Optional : To streamline the process of adding and testing debugging handlers,
+ consider using the nodemon npm package and adding a script in the package.json for initializing the server
+ ```javascript
+  {
+  "name": "quick-express-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+    "start:dev": "nodemon index.js" // new script, do not include this comment
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
  ```
