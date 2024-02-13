@@ -8,7 +8,7 @@ const port = 3000;
 // app.use(bodyParser.json());
 
 // Create necessary handlers for returning request response information as needed for debugging purposes
-// get request at localhost:{port} that send back the sent request information
+// get request at localhost:{port} that sends back the sent request information
 app.get('/', (req, res, next) => {
   console.log('Received get request');
   res.send({reqData: req})
